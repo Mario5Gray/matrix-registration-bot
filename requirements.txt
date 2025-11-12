@@ -1,5 +1,6 @@
-simplematrixbotlib>=2.7.3,<3.0.0
-matrix-nio[e2e]
+simplematrixbotlib==2.12.3
+matrix-nio[e2e]==0.24.0
+pillow<11
 pyyaml
 aiohttp[speedups]
 pytest
