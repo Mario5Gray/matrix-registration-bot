@@ -2,7 +2,14 @@ FROM python:3.11-slim AS compile-image
 MAINTAINER Julian-Samuel Gebühr
 
 
-RUN apt-get update && apt-get install -y --no-install-recommends build-essential gcc libolm-dev
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    gcc \
+    libolm-dev \
+    zlib1g-dev \
+    libjpeg-dev \
+    libpng-dev \
+ && rm -rf /var/lib/apt/lists/*
 
 RUN python -m venv /opt/venv
 
